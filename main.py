@@ -41,7 +41,7 @@ def validate_form(e):
                 p3 = True
 
     if p2 == False and plen == True:
-        display(f' **Password must contain at least one UPPERCASE letter! ')
+        display(f' **Password must contain at least one UPPERCASE letter! ', target='output')
     if p3 == False and plen == True:
         display(f' Password must contain at least ONE NUMBER  !', target='output')
     if plen == False:
@@ -109,6 +109,7 @@ def teams(e):
         document.getElementById("output1").innerHTML = "<img src='y.jpeg' alt='Yellow Team' height='40%' width='40%'>"
     elif team == "none":
         display(f'Sorry, but you are not registered.', target='output')
+
 
 
 
