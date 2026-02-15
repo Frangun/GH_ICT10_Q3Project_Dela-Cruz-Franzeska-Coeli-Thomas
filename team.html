@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PYSCRIPT -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <!-- !-- SETUP BOOTSTAP: link to Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Seatwork 2</title>
+
+    
+    <style>
+    body {
+        background-image: url(ty.jpg);
+        background-size: cover;
+    }
+
+    .header {
+        padding: 20px;
+        background: rgb(117, 36, 50);
+        color: beige;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .container {
+            padding: 20px;
+            background-color: beige;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+    .container4 {
+        padding: 20px;
+    }
+    
+    .container2 {
+            padding: 20px;
+            background-color: beige;
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+    .container3 {
+            padding: 20px;
+            background-color: rgb(117, 36, 50);
+            border-radius: 8px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            display: flex;
+            justify-content: center;
+            display: flex;
+        }
+
+    a {
+        text-decoration: none;
+        color: rgb(117, 36, 50);
+    }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->	
+<nav class="navbar navbar-expand-sm bg-warning navbar-dark sticky-top">
+    <div class="container-fluid">
+
+
+      <a class="navbar-brand" href="javascript:void(0)">
+      	<b style="color:  rgb(117, 36, 50);">Dragonfly Academy</b></span>
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav justify-content-center flex-grow-1">
+
+        	<!-- Signup -->
+          <li class="nav-item">
+            <a class="nav-link"  href="login.html" style="color: rgb(117, 36, 50);">Signup</a>
+          </li>
+
+          <!-- Teams -->
+          <li class="nav-item">
+            <a class="nav-link" href="team.html" style="color: rgb(117, 36, 50);">Team Checker</a>
+          </li>
+
+          <!-- Players -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" style="color: rgb(117, 36, 50);">Players</a>
+          </li>
+
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button class="btn btn-dark" type="button" style="color: rgb(117, 36, 50); background-color: beige;">Search</button>
+        </form>
+    </div>
+</div>
+</nav>
+
+<!-- INTRAMS -->
+<div class="container4">
+
+    <center>
+        <div class="header">
+            <h2>Intramurals Szn!</h2>
+        </div>
+    </center>
+
+    <div>
+        <form>
+
+            <center>
+                <div class="container mt-5">
+                    <!-- REGISTRATION -->
+                    <label for="grade"><h3>Are you done with <b>Online Registration?</b></h3></label> <br>
+
+                    <input type="radio" name="registration" value="yes">yes
+                    <input type="radio" name="registration" value="no">no
+
+                    <!-- CLEARANCE -->
+                    <br><br>
+                    <label for="grade"><h3>Do you have the <b>Medical Clearance</b> from the clinic?</h3></label> <br>
+                    
+                    <input type="radio" name="clearance" value="yes">yes
+                    <input type="radio" name="clearance" value="no">no
+                    <hr>
+                </div>
+            </center>
+
+        <div class="container2 mt-5">
+            <!-- GRADE & SECTION -->
+             <center>
+                <label for="grade_section"><h3>Kindly input your <b>Grade Level & Section.</h3></b></label>
+            </center>
+            <select class="form-control mt-3" name="grade" id="grade">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <select class="form-control mt-3" name="section" id="section">
+                <option value="ruby">Ruby</option>
+                <option value="sapphire">Sapphire</option>
+                <option value="emerald">Emerald</option>
+                <option value="topaz">Topaz</option>
+            </select>
+          
+            <input class="form-control mt-3" type="button" py-click="teams" value="Submit">
+        </div>
+    </form>
+    </div>
+<div class="container3 mt-5" id="output1"></div>
+<div class="container3 mt-5" style="color: beige;" id="output"></div>
+<py-script src="main.py"></py-script>
+
+      <!-- FOOTER -->
+
+    <center>
+	<footer class="mt-5 text-secondary"><b><a href="https://frangun.github.io/2Q-EX2_Dela-Cruz-F./">© 2025 Franzeska Dela Cruz | 10-E </a><br>
+	</center>
+
+</div>
+
+</body>
+</html>
