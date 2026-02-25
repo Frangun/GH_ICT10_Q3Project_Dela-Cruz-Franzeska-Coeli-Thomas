@@ -74,7 +74,7 @@ def teams(e):
     clearance = document.querySelector('input[name="clearance"]:checked').value
     grade = document.getElementById("grade").value
     section = document.getElementById("section").value
-    if regis_input is None or medi_input is None:
+    if registration is None or clearance is None:
     display('Please select both registration and medical status.', target='output')
     return
 
