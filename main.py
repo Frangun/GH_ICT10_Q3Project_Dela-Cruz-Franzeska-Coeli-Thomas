@@ -72,8 +72,6 @@ def teams(e):
     document.getElementById("output").innerHTML = ""
     registration = document.querySelector('input[name="registration"]:checked')
     clearance = document.querySelector('input[name="clearance"]:checked')
-    grade = document.getElementById("grade").value
-    section = document.getElementById("section").value
 
     if registration is None or clearance is None:
         display('Please select both registration and medical status.', target='output')
@@ -130,18 +128,3 @@ def teams(e):
         document.getElementById("output1").innerHTML = "<img src='y.jpeg' alt='Yellow Team' height='40%' width='40%'>"
     elif team == "none":
         display(f'Sorry, but you are not registered.', target='output')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
