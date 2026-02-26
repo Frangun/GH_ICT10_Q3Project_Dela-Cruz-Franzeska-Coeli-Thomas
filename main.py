@@ -70,8 +70,8 @@ def validate_form(e):
 def teams(e):
     document.getElementById("output1").innerHTML = ""
     document.getElementById("output").innerHTML = ""
-    registration = document.querySelector('input[name="registration"]:checked').value
-    clearance = document.querySelector('input[name="clearance"]:checked').value
+    registration = document.querySelector('input[name="registration"]:checked')
+    clearance = document.querySelector('input[name="clearance"]:checked')
     grade = document.getElementById("grade").value
     section = document.getElementById("section").value
 
@@ -83,6 +83,10 @@ def teams(e):
     medi = clearance.value
     grade = document.getElementById("grade").value
     section = document.getElementById("section").value
+
+    if not grade or not section:
+        display('Please select both grade and section.', target='output')
+        return
 
     eligible = "You are not eligible for registration."
     if grade in ["7", "8", "9", "10"]:
@@ -96,6 +100,7 @@ def teams(e):
             return
     eligibility = eligible
 
+    team = None  # Initialize team
     if eligibility == "Yes" and section in ["ruby"]:
         team="Red Team"
     elif eligibility == "Yes" and section in ["sapphire"]:
@@ -105,6 +110,8 @@ def teams(e):
     elif eligibility == "Yes" and section in ["topaz"]:
         team="Yellow Team"
     elif eligibility == "You are not eligible for registration.":
+        team="none"
+    else:
         team="none"
 
     # TEAMS & IMG
@@ -123,6 +130,7 @@ def teams(e):
         document.getElementById("output1").innerHTML = "<img src='y.jpeg' alt='Yellow Team' height='40%' width='40%'>"
     elif team == "none":
         display(f'Sorry, but you are not registered.', target='output')
+
 
 
 
