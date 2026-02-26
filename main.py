@@ -74,16 +74,9 @@ def teams(e):
     clearance = document.querySelector('input[name="clearance"]:checked').value
     grade = document.getElementById("grade").value
     section = document.getElementById("section").value
-    if registration is None or clearance is None:
-        display('Please select both registration and medical status.', target='output')
-        return
 
     if registration == "yes" and clearance == "yes" and grade in ["7", "8", "9", "10"]:
         eligible = "Yes"
-    if registration == "no" and clearance == "yes" and grade in ["7", "8", "9", "10"]:
-        display (f'register online first', target='output')
-    if registration == "yes" and clearance == "no" and grade in ["7", "8", "9", "10"]:
-        display (f'clearance is required', target='output')
     else:
         eligible = "You are not eligible for registration."
 
@@ -116,6 +109,7 @@ def teams(e):
         document.getElementById("output1").innerHTML = "<img src='y.jpeg' alt='Yellow Team' height='40%' width='40%'>"
     elif team == "none":
         display(f'Sorry, but you are not registered.', target='output')
+
 
 
 
