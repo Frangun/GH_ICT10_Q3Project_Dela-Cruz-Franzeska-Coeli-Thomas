@@ -75,10 +75,19 @@ def teams(e):
     grade = document.getElementById("grade").value
     section = document.getElementById("section").value
 
-    if registration == "yes" and clearance == "yes" and grade in ["7", "8", "9", "10"]:
-        eligible = "Yes"
-    else:
-        eligible = "You are not eligible for registration."
+    regis = registration.value
+    clear = clearance.value
+    grade = document.getElementById("grade").value
+    section = document.getElementById("section").value
+
+    eligible = "You are not eligible for registration."
+    if grade in ["7", "8", "9", "10"]:
+        if regis == "yes" and medi == "yes":
+            eligible = "Yes"
+        elif regis == "no" and medi == "yes":
+            display('register online first', target='output')
+        elif regis == "yes" and medi == "no":
+            display('clearance is required', target='output')
 
     eligibility = eligible
 
@@ -109,6 +118,7 @@ def teams(e):
         document.getElementById("output1").innerHTML = "<img src='y.jpeg' alt='Yellow Team' height='40%' width='40%'>"
     elif team == "none":
         display(f'Sorry, but you are not registered.', target='output')
+
 
 
 
