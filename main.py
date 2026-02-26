@@ -75,8 +75,12 @@ def teams(e):
     grade = document.getElementById("grade").value
     section = document.getElementById("section").value
 
+    if registration is None or clearance is None:
+        display('Please select both registration and medical status.', target='output')
+        return
+
     regis = registration.value
-    clear = clearance.value
+    medi = clearance.value
     grade = document.getElementById("grade").value
     section = document.getElementById("section").value
 
@@ -86,9 +90,10 @@ def teams(e):
             eligible = "Yes"
         elif regis == "no" and medi == "yes":
             display('register online first', target='output')
+            return
         elif regis == "yes" and medi == "no":
             display('clearance is required', target='output')
-
+            return
     eligibility = eligible
 
     if eligibility == "Yes" and section in ["ruby"]:
@@ -118,6 +123,7 @@ def teams(e):
         document.getElementById("output1").innerHTML = "<img src='y.jpeg' alt='Yellow Team' height='40%' width='40%'>"
     elif team == "none":
         display(f'Sorry, but you are not registered.', target='output')
+
 
 
 
