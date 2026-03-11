@@ -2,7 +2,7 @@
 from pyscript import document, display
 
 def display_p(e):
-    document.getElementById('output67').InnerHTML = ''
+    document.getElementById('output67').innerHTML = ''
 
     players = ['1. Abayon', '2. Antes', '3. Apostol', '4. Banaag', '5. Barrientos', '6. Casal', '7. Coeli', '8. David', '9. De Mata', '10. Dela Cruz F.', '11. Dela Cruz J.', '12. Dellejero', '13. Fukuda', '14. Gozum', '15. Ibay', '16. Lim', '17. Lozano', '18. Mamauag', '19. Navarro', '20. Precones', '21. Ramos', '22. Sidhu', '23. Tiu', '24. Villamayor', '25. Zaragoza']
 
@@ -128,4 +128,5 @@ def teams(e):
         document.getElementById("output1").innerHTML = "<img src='y.jpeg' alt='Yellow Team' height='40%' width='40%'>"
     elif team == "none":
         display(f'Sorry, but you are not registered.', target='output')
+
 
